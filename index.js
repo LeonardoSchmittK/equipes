@@ -13,8 +13,9 @@ class Sorteador {
     const equipes = [];
     const pessoas = this.getPessoas();
     const quantidadePessoas = pessoas.length;
-    const divisor = quantidadePessoas / this.getNumeroEquipes();
+    const divisor = Math.round(quantidadePessoas / this.getNumeroEquipes());
     const numeroEquipes = this.getNumeroEquipes();
+    console.log(divisor);
     let equipe = [];
 
     function x() {
@@ -68,16 +69,35 @@ class Sorteador {
   }
 }
 
-const sorteador = new Sorteador(
-  [
-    "leo",
-    "dudu",
-    "israel",
-    "henrique",
-    "gustavo",
-    "marcos",
-    "gabriel",
-    "gabriel II",
-  ],
-  4
-).printEquipes();
+const names = [
+  "Alice",
+  "Bob",
+  "Charlie",
+  "David",
+  "Emma",
+  "Frank",
+  "Grace",
+  "Henry",
+  "Ivy",
+  "Jack",
+  "Kate",
+  "Liam",
+  "Mia",
+  "Noah",
+  "Olivia",
+  "Peter",
+  "Quinn",
+  "Rachel",
+  "Samuel",
+  "Taylor",
+  "Uma",
+  "Victor",
+  "Wendy",
+  "Xavier",
+  "Yara",
+  "Zane",
+  "Anna",
+  "Oliveira",
+];
+
+const sorteador = new Sorteador(names, 15).printEquipes();
